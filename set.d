@@ -41,16 +41,16 @@ class Set(T){
     return has;   
   }   
   
-  bool empty(){
+  @property bool empty(){
     if(elements.length==0) return true;
     else return false;
   }
   
-  int size(){
+  @property int size(){
     return elements.length;
   }
   
-  T[] arr(){        
+  @property T[] arr(){        
     return elements;    
   }
 }
