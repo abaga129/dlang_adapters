@@ -1,8 +1,9 @@
 # dlang_adapters
 A collection of classes to create C++ish data structures from D's provided containers.
 
-##Modules
-###Deque
+## Modules
+
+### Deque
 
 |Property |Return Value|Parameters |
 |---------|------------|-----------|
@@ -13,8 +14,14 @@ A collection of classes to create C++ish data structures from D's provided conta
 |back     |T t         |none       |
 |front    |T t         |none       |
 
-###Queue
-###Vector
-###Stack
+### Queue
 
-###Set
+|Property |Return Value|Parameters |
+|---------|------------|-----------|
+|push     |void        |Stuff stuff|
+|pop      |void        |none       |
+|top      |T t         |none       |
+
+### Vector
+### Stack
+### Set
