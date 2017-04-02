@@ -3,6 +3,7 @@ A collection of classes to create C++ish data structures from D's provided conta
 
 ##Modules
 ###Deque
+
 |Property |Return Value|Parameters |
 |---------|------------|-----------|
 |pushBack |void        |Stuff stuff|
