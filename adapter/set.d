@@ -59,3 +59,17 @@ struct Set (T){
     return elements;
   }
 }
+
+unittest @safe {
+  Set!int set;
+  for(int i = 0; i < 1000; ++i){
+    set.insert(i);
+    set.insert(i + 1);
+  }
+  assert(!set.empty());
+  
+  set.erase(10);
+  assert(!set.contains(10));
+  
+  set.clear();
+}
