@@ -7,8 +7,6 @@ Date: April 01, 2017
 */
 module adapter.deque;
 
-import std.container.dlist;
-
 @safe unittest
 {
   import adapter.deque;
@@ -18,6 +16,7 @@ import std.container.dlist;
 
 struct Deque (T)
 { 
+  private import std.container.dlist;
   private DList!T dlist;
   
   public
