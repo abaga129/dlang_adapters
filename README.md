@@ -43,3 +43,19 @@ A collection of classes to create C++ish data structures from D's provided conta
 |empty    |bool        |none       |
 
 ### Set
+|Property |Return Value|Parameters |
+|---------|------------|-----------|
+|insert   |void        |T element  |
+|erase    |void        |T element  |
+|clear    |void        |none       |
+|find     |int         |T element  |
+|empty    |bool        |none       |
+|size     |int         |none       |
+|arr      |T[]         |none       |
+
+### Matrix
+|Property |Return Value|Parameters |
+|---------|------------|-----------|
+|elem     |T[][]       |none       |
+|det      |T           |none       |
+|multiply |Matrix!T    |Matrix!T B |
