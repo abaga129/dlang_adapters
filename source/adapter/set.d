@@ -3,7 +3,7 @@ module adapter.set;
 struct Set (T){
   
   private T[] elements;
-  void insert(T element[]){
+  void insert(T[] element){
     foreach(e; element)
     if(!this.contains(e))
       elements ~= e;
@@ -60,7 +60,7 @@ struct Set (T){
   }
 }
 
-unittest @safe {
+@safe unittest{
   Set!int set;
   for(int i = 0; i < 1000; ++i){
     set.insert(i);

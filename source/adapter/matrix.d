@@ -33,10 +33,8 @@ struct Matrix (T)
   }
 }
 
-Matrix multiply(Matrix LHS, Matrix RHS)
+Matrix multiply (T) (Matrix!T LHS, Matrix!T RHS)
 {
   assert(LHS.m == RHS.n);
   
 }
-
-Matrix inverse(Matrix 
