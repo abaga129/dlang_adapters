@@ -18,10 +18,6 @@ struct Matrix (T)
     }
   }
   
-  Matrix multiply(Matrix A)
-  {
-  }
-  
   @property Matrix inverse()
   {
     
@@ -33,8 +29,24 @@ struct Matrix (T)
   }
 }
 
-Matrix multiply (T) (Matrix!T LHS, Matrix!T RHS)
+/**
+There are more efficient algorithms however much more difficult to
+implement.
+
+Complexity: O(n^3)
+*/
+@safe Matrix multiply (T) (Matrix!T LHS, Matrix!T RHS)
 {
   assert(LHS.m == RHS.n);
+  Matrix!T mat = Matrix!T(LHS.m, RHS.n);
+  for(int i = 0; i < LHS.m; ++i){
+    for(int j = 0; j < RHS.n; ++i){
+      for(int k = 0; k < RHS.m; ++k){
+        mat.elem[i, j] += LHS.elem(i, k) * RHS.elem(k,j);
+      }
+    }
+    
+    return mat;
+  }
   
 }
